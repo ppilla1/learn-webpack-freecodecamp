@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/ppilla1/learn-webpack-freecodecamp#readme",
   "devDependencies": {
+    "css-loader": "^3.5.3",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
