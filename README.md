@@ -13,3 +13,6 @@ npm install --save-dev bootstrap
 
 #4# Install webpack sass loader
 npm install --save-dev sass-loader node-sass
+
+#5# Install Html webpack plugin
+npm install --save-dev html-webpack-plugin
