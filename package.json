@@ -5,7 +5,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack",
+    "start": "webpack --config ./config/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
