@@ -7,6 +7,9 @@ import { ComponentService } from "./services/component.service";
 /* CSS modules importing */
 import "./style.css";
 
+/* SASS modules importing */
+import "./main.scss";
+
 const alertService = new AlertService();
 const componentService = new ComponentService();
 
