@@ -4,9 +4,6 @@ import { parseInputs } from "./utils/parse-inputs.util";
 import { AlertService } from "./services/alert.service";
 import { ComponentService } from "./services/component.service";
 
-/* CSS modules importing */
-import "./style.css";
-
 /* SASS modules importing */
 import "./main.scss";
 
