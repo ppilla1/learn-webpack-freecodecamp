@@ -20,3 +20,12 @@ npm install --save-dev webpack-merge
 
 #7# Install webpack dev server
 npm install --save-dev webpack-dev-server
+
+#8# Install html loader (used for parsing resource references in html and wrapping as javascript module using require keyword)
+npm install --save-dev html-loader
+
+#9# Install file loader
+npm install --save-dev file-loader
+
+#10# Install clean webpack plugin
+npm install --save-dev clean-webpack-plugin

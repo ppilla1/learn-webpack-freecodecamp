@@ -31,4 +31,5 @@ const run = (alertService, componentService) => {
   
   };
 
+  console.log('Starting application...')
 run(alertService, componentService);
