@@ -2,7 +2,10 @@ const path = require("path");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry : "./src/app-one/index.js",
+    entry : {
+        app: "./src/app-one/index.js",
+        vendor: "./src/app-one/vendor.js"
+    },
     plugins: [
         new CleanWebpackPlugin()
     ],
