@@ -30,5 +30,5 @@ npm install --save-dev file-loader
 #10# Install clean webpack plugin
 npm install --save-dev clean-webpack-plugin
 
-#11# Install bootstrap and popper.js
-npm install --save-dev bootstrap popper.js
+#11# Install popper.js and jquery
+npm install --save-dev jquery popper.js 
