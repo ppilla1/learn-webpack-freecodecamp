@@ -9,12 +9,12 @@ module.exports = merge(common, {
         new HtmlWebpackPlugin({
         template: "./src/app-one/templates/index-template.html",
         filename: "app-one.html",
-        chunks: ['app']
+        chunks: ['app', 'vendor']
     }),
     new HtmlWebpackPlugin({
         template: "./src/app-one/templates/index-template.html",
         filename: "app-two.html",
-        chunks: ['vendor']
+        chunks: ['appTwo','vendor']
     })],
     output : {
         filename : "[name]-[hash].js",

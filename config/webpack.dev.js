@@ -7,7 +7,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
     mode: 'development',
     plugins: [new HtmlWebpackPlugin({
-        template: "./src/app-one/templates/index-template.html"
+        template: "./src/app-one/templates/index-template.html",
+        chunks: ['app', 'vendor']
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/app-one/templates/index-template.html",
+        filename: "app-two.html",
+        chunks: ['appTwo','vendor']
     })],
     output : {
         filename : "[name].js",
