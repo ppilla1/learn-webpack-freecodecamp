@@ -6,6 +6,18 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
     mode: 'development',
+    module:{
+        rules: [
+            {
+                test: /\.scss$/,
+                use:[
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }
+        ]
+    },
     plugins: [new HtmlWebpackPlugin({
         template: "./src/app-one/templates/index-template.html",
         chunks: ['app', 'vendor']
