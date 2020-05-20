@@ -35,3 +35,6 @@ npm install --save-dev jquery popper.js
 
 #12# Install mini-css-extract-plugin to extract css files out of build js files
 npm install --save-dev mini-css-extract-plugin
+
+#13# Install css minification plugin
+npm install --save-dev optimize-css-assets-webpack-plugin
