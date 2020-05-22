@@ -15,6 +15,16 @@ module.exports = merge(common, {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(svg|png|jpg|gif)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name]-[hash].[ext]",
+                        outputPath: "img"
+                    }
+                }
             }
         ]
     },

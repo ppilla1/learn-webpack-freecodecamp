@@ -8,23 +8,13 @@ module.exports = {
         vendor: "./src/app-one/vendor.js"
     },
     plugins: [
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, "../dist")]})
     ],
     module : {
         rules: [
             {
                 test: /\.html$/,
                 use: ['html-loader']
-            },
-            {
-                test: /\.(svg|png|jpg|gif)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: "[name]-[hash].[ext]",
-                        outputPath: "img"
-                    }
-                }
             }
         ]
     }

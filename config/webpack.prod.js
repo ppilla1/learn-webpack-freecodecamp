@@ -8,7 +8,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = merge(common, {
-    mode: 'production',
+    mode: 'development',
     module: {
         rules: [
             {
@@ -18,16 +18,27 @@ module.exports = merge(common, {
                     'css-loader', //2. Turns css into commonjs
                     'sass-loader' //1. Turns sass into css
                 ]
+            },
+            {
+                test: /\.(svg|png|jpg|gif)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name]-[hash].[ext]",
+                        outputPath: "../img",
+                        publicPath: "img"
+                    }
+                }
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name]-[hash].bundle.css"
+            filename: "../css/[name]-[hash].bundle.css"
         }),        
         new HtmlWebpackPlugin({
         template: "./src/app-one/templates/index-template.html",
-        filename: "app-one.html",
+        filename: "../app-one.html",
         chunks: ['app', 'vendor'],
         minify:{ //Minify instructions for html
             removeAttributeQuotes: true
@@ -35,7 +46,7 @@ module.exports = merge(common, {
     }),
     new HtmlWebpackPlugin({
         template: "./src/app-one/templates/index-template.html",
-        filename: "app-two.html",
+        filename: "../app-two.html",
         chunks: ['appTwo','vendor'],
         minify:{ //Minify instructions for html
             removeAttributeQuotes: true
@@ -49,6 +60,6 @@ module.exports = merge(common, {
     },
     output : {
         filename : "[name]-[hash].bundle.js",
-        path: path.resolve(__dirname, "../dist")
+        path: path.resolve(__dirname, "../dist/js")
     }
 });
